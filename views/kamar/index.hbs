@@ -1,0 +1,45 @@
+<nav class="navbar navbar-light bg-primary">
+    <img src="/images/logo.png" width="50" alt="">
+    <h3><a class="navbar-brand">MATRIK</a></h3>
+    <form class="form-inline">
+        <a class="btn btn-primary" href="/admin/hotel">KELOLA HOTEL</a>
+        <a class="btn btn-primary" href="/login">LOGOUT</a>
+    </form>
+</nav>
+<br><br>
+
+<div class="float-right mt-5 mb-2">
+    <a class="btn btn-primary ml-5" href="/admin/kamar/tambah" style="font-size: 17px; color:white"> + TAMBAH</a>
+    &nbsp;
+    &nbsp;
+
+    <a class="btn btn-danger " href="/login" style="font-size: 17px; color:white"> KELUAR </a>
+</div>
+&nbsp;
+
+<div padding="">
+    <table border="1" width="100%">
+        <thead>
+            <tr bgcolor="aqua">
+                <th>Nama Kamar</th>
+                <th>Fasilitas</th>
+                <th>Harga</th>
+                <th>Opsi </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each kamar}}
+            <tr>
+                <td>{{ namakamar }}</td>
+                <td>{{ fasilitas }}</td>
+                <td>{{ harga }}</td>
+                <td>
+                    <h6><a href="/admin/kamar/ubah/{{ id }}"> Ubah </a> |&nbsp;
+                        <a href="/admin/kamar/{{ id }}/delete"> Delete</a> </h6>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+
+    </table>
+</div>

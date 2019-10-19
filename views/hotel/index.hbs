@@ -1,0 +1,61 @@
+<nav class="navbar navbar-light bg-primary">
+    <img src="/images/logo.png" width="50" alt="">
+    <h3><a class="navbar-brand">MATRIK</a></h3>
+    <form class="form-inline">
+
+        <a class="btn btn-primary" href="/login">LOGOUT</a>
+    </form>
+</nav>
+<br><br>
+
+<center>
+    <h1 class="mt-5"> <b>Kelola Hotel</b></h1>
+</center>
+<div class="container">
+    <div class="float-right">
+
+
+        <a href="/admin/hotel/tambah" class="btn btn-primary">TAMBAH</a>
+        &nbsp;
+        &nbsp;
+
+
+        <a class="btn btn-danger " href="/login" style="font-size: 17px; color:white"> KELUAR </a>
+    </div>
+</div>
+&nbsp;
+<div class="container mt-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    <h3> <b>Nama hotel </b> </h3>
+                </th>
+                <th scope="col">
+                    <h3> <b>Alamat </b></h3>
+                </th>
+                <th scope="col">Opsi</th>
+            </tr>
+        </thead>
+        {{#each vila}}
+        <tbody>
+
+            <tr>
+                <td>
+                    <h5> {{ namahotel }} </h5>
+                </td>
+                <td>
+                    <h5> {{ alamat }} </h5>
+                </td>
+                <td>
+                    <a class="btn btn-primary ml-5 " href="/admin/hotel/ubah/{{ id }}"> UBAH </a>
+                </td>
+                {{!-- <td>
+          <h6> <a class="btn btn-primary mb-2" style="font-size: 15px;" href="/admin/hotel/ubah/{{ id }}"> UBAH </a>
+          </h6>
+        </td> --}}
+            </tr>
+        </tbody>
+        {{/each}}
+    </table>
+</div>
